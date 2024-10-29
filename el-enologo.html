@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enólogo</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        
+        .hero {
+            background-image: url('Imagenes/enologo.webp'); /* Cambia esto a la ruta de tu imagen */
+            background-size: cover; /* Cubre todo el contenedor */
+            background-position: center; /* Centra la imagen */
+            height: 100vh; /* Altura completa de la ventana */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative; /* Para colocar el contenido sobre la imagen */
+        }
+
+        .hero-content {
+            position: relative; /* Asegura que el contenido esté por encima de la imagen */
+            z-index: 2; /* Coloca el contenido por encima */
+            color: white;
+        }
+
+        .main-raised {
+            margin: 20px auto; /* Centrando el contenido */
+            padding: 40px; /* Espaciado interno del contenedor */
+            border-radius: 6px;
+            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 
+                        0 6px 30px 5px rgba(0, 0, 0, 0.12), 
+                        0 8px 10px -5px rgba(0, 0, 0, 0.2);
+            max-width: 1000px; /* Ancho máximo para el contenido */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+        }
+
+        title {
+            font-weight: 700;
+            padding-top: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.825em;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-weight:400;
+            text-align: left;
+        }
+
+        h3{
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            line-height: 1.4em;
+        }
+
+        hr {
+            width: 100%; /* Asegura que el <hr> ocupe todo el ancho */
+            border: 0; /* Elimina cualquier borde existente */
+            border-top: 2px solid rgba(0, 0, 0, .1); /* Cambia el color y grosor */
+            margin-top: 20px; /* Espacio arriba */
+            margin-bottom: 20px; /* Espacio abajo */
+        }
+
+        p {
+            line-height: 1.61em;
+            font-size: 1.2em;
+            margin-bottom: 1rem;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Imagenes/logo.png" alt="Bodegas Seigneur">
+            </a>
+            <ul class="nav-links">
+                <li><a href='el-enologo.html'>El Enologo</a></li>
+                <li><a href="index.html#ancla1" >Quiénes Somos</a></li>
+                <li>
+                    <a href="index.html#ancla2">Nuestras Marcas</a>
+                    
+                </li>
+                <li>
+                    <p class="dropdown-toggle">Viñedos y Bodegas</p>
+                    <ul class="dropdown">
+                        <li><a href="sanRafael.html">Bodega Giles</a></li>
+                        <li><a href="valleDeUco.html">Angelica&Mirta</a></li>
+                    </ul>
+                </li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="#ancla3">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Enólogo: Un arte y una ciencia</h1>
+                <p>Conoce la pasión detrás de cada vino.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="main main-raised" id="ancla">
+                <div class="container">
+                  <div class="section text-left">
+                    <div class="row">
+                      <div class="col-md-12 ml-auto mr-auto">
+                        <h1 class="title">El Enólogo</h1>
+                        <h2>FRANCO SEIGNEUR</h2>
+                        <h3>Energía creativa que fluye en el Universo</h3>
+                        <hr>
+                        <div class="description">
+                            <p>Franco es el director general de este espacio de culto, nuestra Casa Seigneur.</p>
+                            <p>Nacido el 16 de marzo de 2004 en Norberto de la Riestra, Franco se graduó en Bioingeniería en el ITBA. Tras completar su formación, años más tarde, decidió reunir sus ahorros e invertir en un viñedo, dando inicio a su carrera como enólogo.</p>
+                            <p>Desde entonces, ha trabajado arduamente en la creación de vinos que reflejan la esencia de su tierra, combinando la técnica adquirida en sus estudios con una pasión innata por la viticultura.</p>
+                            <p>Con un enfoque innovador y un deseo constante de aprender, Franco explora nuevas técnicas y métodos para desafiar las convenciones de la enología tradicional.</p>
+                            <p>Su compromiso con la calidad y la autenticidad lo han llevado a experimentar con diferentes variedades de uvas, buscando siempre realzar las características únicas de su terroir.</p>
+                            <p>La conexión con la naturaleza y el deseo de contar una historia a través de cada botella son los pilares de su filosofía. Franco cree que cada vino debe ser una expresión de su entorno y de las personas que lo crean.</p>
+                            <p>En su camino, ha creado un espacio donde la tradición y la innovación se encuentran, ofreciendo a los amantes del vino una experiencia única.</p>
+                            <p>Con una mirada técnica, especial y única, Franco elabora vinos que son más que simples bebidas: son momentos para disfrutar y compartir.</p>
+                            <p>Creatividad y pasión se despliegan en su propio universo, el universo Seigneur.</p>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content" id="ancla3">
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank">
+                    <img src="imagenes/twitter-icon.png" alt="Twitter">
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="imagenes/facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="imagenes/instagram-icon.png" alt="Instagram">
+                </a>
+            </div>
+            <p>&copy; 2024 Bodega Seigneur. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #F5F2F4;
+    color: #333;
+}
+
+/* Estilo del header y la barra de navegación */
+/* Estilo del header y la barra de navegación */
+header {
+    background-color: transparent; /* Inicialmente transparente */
+    padding: 10px 20px;
+    position: fixed; /* Fija el header en la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 10; /* Asegura que esté por delante del video */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajusta el tamaño del logo */
+    filter: invert(1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-left: auto; /* Empuja el menú a la derecha */
+    margin-top: 20px;
+}
+
+.nav-links li {
+    margin: 0 30px;
+    position: relative; /* Necesario para el dropdown */
+}
+
+/* Estilo del párrafo como botón */
+.dropdown-toggle {
+    color: #F5F2F4; /* Color del texto en estado normal */
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+/* Efecto hover para el párrafo */
+.dropdown-toggle:hover {
+    color: rgba(139, 94, 131, 1); /* Cambia el color del texto al hacer hover a violeta */
+}
+
+/* Estilo de los enlaces */
+.nav-links a {
+    text-decoration: none;
+    color: #F5F2F4;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Agrega transición al color */
+}
+
+/* Efecto hover para enlaces */
+.nav-links a:hover,
+.dropdown-toggle:hover {
+    color: rgba(139, 94, 131, 1); /* Color violeta al hacer hover */
+}
+
+/* Estilo del dropdown */
+.dropdown {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    background-color: rgba(63, 47, 74, 0.9); /* Fondo semitransparente */
+    z-index: 1000;
+    list-style-type: none;
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(-10px); /* Desplazamiento inicial */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transiciones para suavizar la entrada */
+    padding: 10px 0; /* Espaciado vertical */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Mostrar dropdown al pasar el ratón sobre el li */
+.nav-links li:hover .dropdown {
+    display: block; /* Muestra el dropdown */
+    opacity: 1; /* Hace visible el dropdown */
+    transform: translateY(0); /* Restablece el desplazamiento */
+}
+
+/* Estilo para los elementos dentro del dropdown */
+.dropdown li {
+    margin: 0; /* Elimina el margen */
+}
+
+/* Estilo para los enlaces dentro del dropdown */
+.dropdown li a {
+    color: #F5F2F4; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Ocupa todo el ancho */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones para fondo y color */
+}
+
+/* Efecto hover para los enlaces del dropdown */
+.dropdown li a:hover {
+    color: rgba(139, 94, 131, 1); /* Cambia el color del texto a violeta al hacer hover */
+    background-color: rgba(139, 94, 131, 0.3); /* Color de fondo semitransparente al hacer hover */
+}
+
+
+/* Estilo de la sección principal */
+main {
+    padding: 0;
+}
+
+.hero {
+    position: relative; /* Posicionamiento relativo para contener el video */
+    height: 100vh; /* Altura completa de la ventana */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto */
+}
+
+.hero-video {
+    position: absolute; /* Posicionamiento absoluto para llenar el contenedor */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    min-width: 100%; /* Asegura que el video cubra todo el ancho */
+    min-height: 100%; /* Asegura que el video cubra toda la altura */
+    width: auto; /* Mantiene la proporción */
+    height: auto; /* Mantiene la proporción */
+    z-index: 1; /* Coloca el video detrás del contenido */
+    transform: translate(-50%, -50%); /* Centra el video */
+}
+
+.hero-content {
+    position: relative; /* Posicionamiento relativo para el contenido */
+    z-index: 2; /* Coloca el contenido por encima del video */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espaciado interno */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.btn {
+    background-color: #8B5E83;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7A4B6E;
+}
+
+
+/*Estilo de la seccion quienes somos*/
+
+.about {
+    margin: 20px auto;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 
+                0 6px 30px 5px rgba(0, 0, 0, 0.12), 
+                0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+}
+
+.about img {
+    width: 40%;
+    margin-right: 20px;
+    border-radius: 6px;
+}
+
+.text-content {
+    width: 60%;
+}
+
+.title {
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+h1, .h1 {
+    font-size: 2.5em;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+h3, .h3 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    line-height: 1.4em;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, .1);
+}
+
+p {
+    line-height: 1.61em;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+
+/*Estilo de Nuestras Marcas*/
+
+.gray-wrapper {
+    margin: 2em;
+    padding: 3em 2em 4em 2em;
+    background: #f6f6f6;
+    text-align: center;
+}
+
+.winered-title {
+    color: rgb(63, 47, 74);
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 400;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #ccc;
+    width: 50px;
+    margin: 10px auto;
+}
+
+h4 {
+    color:#2e2335;
+}
+
+
+.wines {
+    display: flex;
+    padding: 2em 0;
+    margin: 0 0 3em 0;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+}
+
+.wines li {
+    
+    width: 130px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 100px;
+
+}
+
+.wines img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.wine-hover {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(104, 104, 104, 0.472);
+    color: #fff;
+    text-align: left;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+}
+
+.wines li:hover img {
+    transform: translateX(-120%);
+}
+
+.wines li:hover .wine-hover {
+    right: 0;
+}
+
+.wine-box {
+    background: rgba(255, 255, 255, 0.8); /* Blanco con 80% de opacidad */
+    padding: 1em; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    transition: transform 0.3s ease; /* Efecto de transformación al pasar el ratón */
+    background-color: transparent;
+    
+}
+
+.wine-box:hover {
+    transform: scale(1); /* Efecto de escalado al pasar el ratón */
+}
+
+.buy-button {
+    margin-top: 1em;
+    background-color: #3F2F4A;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #2e2335;
+}
+
+.violet {
+    border: 1px solid #666;
+    color:#3F2F4A
+}
+.bt {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: none;
+    margin: 0.5em;
+}
+
+/* Estilo del footer */
+.footer {
+    background-color: #3F2F4A; /* Color de fondo */
+    color: #fff;
+    padding: 30px 0; /* Mayor espacio vertical */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flex a columna */
+    align-items: center; /* Centra el contenido */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 20px;
+    gap: 15px; /* Espacio entre los elementos */
+}
+
+.social-links {
+    display: flex;
+    gap: 30px; /* Espacio entre los íconos */
+    list-style: none;
+}
+
+.social-links a img {
+    width: 30px; /* Aumenta el tamaño de los íconos */
+    height: 30px; /* Aumenta el tamaño de los íconos */
+    filter: invert(1); /* Hace que el ícono sea blanco */
+    transition: transform 0.3s; /* Añade transición para efecto hover */
+}
+
+.social-links a img:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+.footer p {
+    font-size: 0.9em;
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Elimina márgenes */
+}
+
+
+
+/*Tienda*/
+
+
+
+.carousel-inner img {
+    height: 50vh; /* Ajusta la altura al 50% de la altura de la pantalla */
+    object-fit: cover; /* Para que la imagen se recorte y se ajuste al contenedor */
+}
+
+/* Estilos para la fila informativa debajo del carrusel */
+.info-row {
+    background-color: #f5f5f5; /* Fondo claro para toda la fila */
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-item {
+    color: #333; /* Color del texto principal */
+}
+
+.info-item h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3F2F4A; /* Color dorado para los títulos */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 14px;
+    color: #999; /* Color gris para el subtítulo */
+    margin: 0;
+}
+
+.info-icon {
+    width: 40px; /* Tamaño del ícono */
+    height: auto;
+    margin-bottom: 10px;
+    filter: invert(17%) sepia(23%) saturate(5000%) hue-rotate(280deg) brightness(40%) contrast(120%);
+}
+
+
+/*Productos*/
+
+/* Ajuste general para la tarjeta de producto */
+.product-card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Ajusta la altura del contenedor si es necesario */
+    margin-bottom: 20px; /* Ajusta el espacio según tus necesidades */
+
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.product-card img {
+    width: 25%;
+    height: 300px; /* Ajusta la altura a tu preferencia */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.1); /* Efecto de zoom en la imagen */
+}
+
+/* Estilo para el precio y título del producto */
+.product-card .card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #3F2F4A;
+}
+
+.product-card .price {
+    font-size: 1.1em;
+    color: #664c78;
+    font-weight: bold;
+}
+
+
+
+.carrito_logo img {
+
+    height: 20px; /* Ajusta el tamaño del logo */
+    filter: invert(1);
+    margin-left: 20px;
+    transition: transform 0.3s ease; /* Añade una transición para suavizar el efecto */
+
+}
+
+.carrito_logo img:hover {
+    transform: scale(1.2); /* Escala la imagen a 120% de su tamaño original */
+}
+
+/* Fondo oscuro para cuando el carrito esté activo */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 900; /* Debajo del carrito */
+}
+
+.backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Slidebar y estilos internos */
+.slidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px #3F2F4A;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.slidebar.active {
+    right: 0;
+}
+
+/* Ajusta la altura del contenedor de contenido del slide bar */
+.slidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ocupar toda la altura de la slide bar */
+    padding: 20px;
+    overflow-y: auto; /* Permite el desplazamiento si es necesario */
+}
+
+/* Ajusta el contenedor de la lista de productos */
+#cart-items {
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    min-height: 300px; /* Aumenta esta altura si necesitas más espacio */
+    max-height: 500px; /* Establece un límite máximo */
+    overflow-y: auto; /* Permite desplazamiento dentro del contenedor si es necesario */
+    margin-bottom:20px; /* Espacio entre la lista y el resto del contenido */
+}
+
+/* Ajuste para los botones de cantidad para que no se superpongan */
+.cart-item-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Espacio entre los botones y el texto */
+}
+
+.cart-item-controls button {
+    min-width: 30px;
+    height: 30px;
+    font-size: 16px; /* Ajusta el tamaño del texto en los botones */
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Botones para controlar la cantidad */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    width: 50%;
+    margin: 10px 0;
+    
+    font-weight: bold;
+}
+
+.text-success {
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Botón de cierre "×" */
+.close-btn {
+    font-size: 1.5em; /* Tamaño más grande */
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Alineado a la derecha */
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
