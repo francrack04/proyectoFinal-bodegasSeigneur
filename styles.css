@@ -681,7 +681,7 @@ h4 {
     }
 
     .product-card {
-        width: 90%; /* Ancho de la tarjeta */
+        width: 95%; /* Ancho de la tarjeta */
         margin: 0 auto; /* Centra la tarjeta horizontalmente */
         display: flex; /* Opcional: permite centrar el contenido interno */
         flex-direction: column; /* Opcional: organiza el contenido en columna */
