@@ -688,8 +688,12 @@ h4 {
         align-items: center; /* Opcional: alinea el contenido al centro */
     }
 
+    .product-card:hover {
+        transform: scale(1);
+    }
+
     .product-card:hover img {
-        transform: none; /* Efecto de zoom en la imagen */
+        transform: scale(1); /* Efecto de zoom en la imagen */
     }
 
     /* 3. Ocultar imagen en index.html y expandir el texto a todo el ancho */
