@@ -647,7 +647,11 @@ h4 {
         justify-content: space-between;
     }
 
+   .gray-wrapper {
+    display:none;
+   }
     
+
 
     /* Ajuste de la slidebar del carrito */
     .slidebar {
@@ -660,7 +664,7 @@ h4 {
     }
 
     .product-card {
-        width: 70%; /* Ancho de la tarjeta */
+        width: 90%; /* Ancho de la tarjeta */
         margin: 0 auto; /* Centra la tarjeta horizontalmente */
         display: flex; /* Opcional: permite centrar el contenido interno */
         flex-direction: column; /* Opcional: organiza el contenido en columna */
@@ -681,8 +685,3 @@ h4 {
         padding: 0 10px; /* Añadir un pequeño padding lateral */
     }
 }
-
-    
-    
-}
-
