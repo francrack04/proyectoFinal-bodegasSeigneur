@@ -624,21 +624,25 @@ h4 {
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Ocultar todos los elementos de navegación excepto el logo, El Enólogo, y Tienda */
+    /* Ocultar todos los elementos de navegación excepto el logo y El Enólogo */
     .nav-links li {
         display: none;
     }
 
-    /* Mostrar solo el logo, El Enólogo, y Tienda */
+    /* Mostrar solo el logo y El Enólogo */
     .logo,
-    .nav-links li:nth-child(1), /* El Enólogo */
-    .nav-links li:nth-child(5) /* Tienda */ {
+    .nav-links li:nth-child(1) { /* El Enólogo */
         display: block;
     }
 
-    /* Ajuste del carrito para que permanezca visible */
+    /* Mostrar el carrito */
     .carrito_logo {
         display: block;
+    }
+
+    /* Ocultar el <li> de "Tienda" solo en tienda.html */
+    .tienda-page .nav-links li:nth-child(5) { /* Tienda */
+        display: none; /* Oculta "Tienda" en tienda.html */
     }
 
     /* Ajuste para el header */
@@ -647,17 +651,14 @@ h4 {
         justify-content: space-between;
     }
 
-   .gray-wrapper {
-    display:none;
-   }
-    
-
+    .gray-wrapper {
+        display: none;
+    }
 
     /* Ajuste de la slidebar del carrito */
     .slidebar {
         width: 100%;
     }
-
 
     .info-row {
         display: none;
@@ -671,10 +672,9 @@ h4 {
         align-items: center; /* Opcional: alinea el contenido al centro */
     }
 
-   .product-card:hover img {
+    .product-card:hover img {
         transform: none; /* Efecto de zoom en la imagen */
     }
-    
 
     /* 3. Ocultar imagen en index.html y expandir el texto a todo el ancho */
     .about img {
@@ -685,4 +685,10 @@ h4 {
         width: 100%; /* Hacer que el texto ocupe todo el ancho */
         padding: 0 10px; /* Añadir un pequeño padding lateral */
     }
+
+    /* Ocultar el botón "Ver Nuestras Marcas" */
+    .hero-content .btn {
+        display: none; /* Ocultar el botón */
+    }
 }
+
