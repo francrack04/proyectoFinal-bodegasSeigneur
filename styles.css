@@ -620,3 +620,22 @@ h4 {
     color: #333;
     cursor: pointer;
 }
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ocultar el header */
+    header {
+        display: none;
+    }
+
+    header .carrito {
+        display: block; /* Asegúrate de que el carrito esté visible */
+        position: fixed; /* Para que se mantenga visible aunque el header esté oculto */
+        top: 0; /* Ajusta la posición si es necesario */
+        right: 10px; /* Ajusta según prefieras */
+    }
+
+    
+}
+
