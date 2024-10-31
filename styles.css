@@ -621,6 +621,22 @@ h4 {
     cursor: pointer;
 }
 
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ocultar todos los elementos de navegación */
+    .nav-links li {
+        display: none;
+    }
+
+    /* Mostrar solo el logo, El Enólogo, y Tienda */
+    .logo,
+    .nav-links li:nth-child(1), /* El Enólogo */
+    .nav-links li:nth-child(5) /* Tienda */ {
+        display: block;
+    }
+
+    
+}
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -691,4 +707,3 @@ h4 {
         display: none; /* Ocultar el botón */
     }
 }
-
