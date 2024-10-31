@@ -624,18 +624,65 @@ h4 {
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Ocultar el header */
-    header {
+    /* Ocultar todos los elementos de navegación excepto el logo, El Enólogo, y Tienda */
+    .nav-links li {
         display: none;
     }
 
-    header .carrito {
-        display: block; /* Asegúrate de que el carrito esté visible */
-        position: fixed; /* Para que se mantenga visible aunque el header esté oculto */
-        top: 0; /* Ajusta la posición si es necesario */
-        right: 10px; /* Ajusta según prefieras */
+    /* Mostrar solo el logo, El Enólogo, y Tienda */
+    .logo,
+    .nav-links li:nth-child(1), /* El Enólogo */
+    .nav-links li:nth-child(5) /* Tienda */ {
+        display: block;
     }
 
+    /* Ajuste del carrito para que permanezca visible */
+    .carrito_logo {
+        display: block;
+    }
+
+    /* Ajuste para el header */
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    
+
+    /* Ajuste de la slidebar del carrito */
+    .slidebar {
+        width: 100%;
+    }
+
+
+    .info-row {
+        display: none;
+    }
+
+    .product-card {
+        width: 70%; /* Ancho de la tarjeta */
+        margin: 0 auto; /* Centra la tarjeta horizontalmente */
+        display: flex; /* Opcional: permite centrar el contenido interno */
+        flex-direction: column; /* Opcional: organiza el contenido en columna */
+        align-items: center; /* Opcional: alinea el contenido al centro */
+    }
+
+   
+
+    
+
+    /* 3. Ocultar imagen en index.html y expandir el texto a todo el ancho */
+    .about img {
+        display: none;
+    }
+
+    .about .text-content {
+        width: 100%; /* Hacer que el texto ocupe todo el ancho */
+        padding: 0 10px; /* Añadir un pequeño padding lateral */
+    }
+}
+
+    
     
 }
 
